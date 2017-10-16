@@ -1,7 +1,6 @@
-#github-logo {
-  /*height: auto;*/
-  /*width: 50%;*/
-  /*color: white;*/
-  /*z-index: 10;*/
-  /*background-color: white;*/
+.appbar-links {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }

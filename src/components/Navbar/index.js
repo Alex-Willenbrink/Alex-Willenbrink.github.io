@@ -4,6 +4,8 @@ import IconButton from "material-ui/IconButton";
 import SvgIcon from "material-ui/SvgIcon";
 import FlatButton from "material-ui/FlatButton";
 
+import Contact from "../Contact";
+
 import { Github, Torah, LinkedIn } from "../CustomSvg";
 
 import "./Navbar.css";
@@ -40,9 +42,11 @@ const Navbar = () =>
     }
     iconElementRight={
       <div className="appbar-links">
-        <FlatButton label="Portfolio" />
+        <div>
+          <FlatButton label="Portfolio" />
+        </div>
         <FlatButton label="About" />
-        <FlatButton label="Contact" />
+        <Contact />
       </div>
     }
   />;

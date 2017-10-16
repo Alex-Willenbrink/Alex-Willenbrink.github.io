@@ -1,0 +1,38 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*width: 1500px !important;*/
+}
+
+.contact-container .text {
+  width: 60% !important;
+}
+
+.contact-modal {
+  background-color: green;
+  width: 600px;
+  margin-top: 30vh;
+  margin-left: calc(50vw - 300px);
+}
+
+.buttons-container {
+  /*width: 100%;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.message-button {
+  margin: 5px !important;
+}
+
+#submit-button {
+  background-color: #4caf50 !important;
+}
+
+#cancel-button {
+  background-color: #f44336 !important;
+}
