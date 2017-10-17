@@ -1,12 +1,18 @@
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 
-import { green500, green700, teal600 } from "material-ui/styles/colors";
+import {
+  green500,
+  green700,
+  teal600,
+  yellow500,
+  grey900
+} from "material-ui/styles/colors";
 
 export default getMuiTheme({
   // spacing: spacing,
   fontFamily: "Roboto, sans-serif",
   palette: {
-    primary1Color: green500,
+    primary1Color: grey900,
     primary2Color: green700,
     primary3Color: teal600
     // accent1Color: teal600,

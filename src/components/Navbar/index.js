@@ -12,6 +12,7 @@ import "./Navbar.css";
 
 const Navbar = () =>
   <AppBar
+    // title="Alex Willenbrink"
     iconElementLeft={
       <div className="appbar-icons">
         <a href="https://github.com/Alex-Willenbrink" target="_blank">
@@ -42,10 +43,7 @@ const Navbar = () =>
     }
     iconElementRight={
       <div className="appbar-links">
-        <div>
-          <FlatButton label="Portfolio" />
-        </div>
-        <FlatButton label="About" />
+        <FlatButton label="Portfolio" className="navbar-button" />
         <Contact />
       </div>
     }

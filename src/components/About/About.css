@@ -1,23 +1,28 @@
 .about-container {
-  margin-top: 20px;
+  background-color: #00bfa5;
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center !important;
   align-items: center;
 }
 
-.about-container #profile-pic {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
+.intro-about-text {
+  color: white !important;
+  width: 80%;
+  font-size: calc(0.6em + 2.3vw);
 }
 
-.about-container #title {
-  font-size: 46px;
+.about-text {
+  color: white !important;
+  width: 80%;
+  text-align: left;
+  font-size: calc(0.4em + 1.5vw);
+  line-height: 1.8em;
 }
 
-.about-container .text {
-  width: 50%;
-  line-height: 150%;
-  font-size: 1.2em;
+.about-title {
+  color: white;
+  font-size: calc(1em + 3vw);
 }

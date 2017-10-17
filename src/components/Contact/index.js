@@ -46,7 +46,11 @@ export default class Contact extends Component {
     ];
     return (
       <div>
-        <FlatButton label="CONTACT" onClick={this.handleOpen} />
+        <FlatButton
+          label="CONTACT"
+          onClick={this.handleOpen}
+          className="navbar-button"
+        />
 
         <Modal
           isOpen={this.state.open}

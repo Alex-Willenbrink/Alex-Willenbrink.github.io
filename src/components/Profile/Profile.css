@@ -1,0 +1,39 @@
+.profile-container {
+  padding: 50px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center !important;
+  align-items: center;
+  background-color: #00bfa5;
+}
+
+.profile-container #profile-pic {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile-container .text {
+  width: 50%;
+  line-height: 170%;
+  font-size: 1.4em;
+  font-family: "Roboto";
+  color: #424242;
+  text-align: left;
+}
+
+.profile-title {
+  color: white;
+  font-size: calc(1em + 3vw);
+}
+
+.divider {
+  height: calc(0.2em + 0.2vw) !important;
+  font-weight: bold;
+  width: 30vw;
+}
+
+.profile-text {
+  color: white !important;
+}

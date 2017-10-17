@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
+
 .appbar-links {
   margin-top: 5px;
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+.navbar-button {
+  color: white !important;
+  font-family: 'Roboto' !important;
+  font-weight: bold !important;
 }
