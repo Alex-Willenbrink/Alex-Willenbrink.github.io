@@ -7,23 +7,14 @@ import Paper from "material-ui/Paper";
 
 import { green500 } from "material-ui/styles/colors";
 
+// import EmailService from "../../services/nodemailer";
 import "./Contact.css";
-
-// const modalStyle = {
-//   overlay: {
-//     position: "fixed",
-//     top: 0,
-//     left: 0,
-//     right: 0,
-//     bottom: 0,
-//     width: "200px",
-//     backgroundColor: "rgba(255, 255, 255, 0.75)"
-//   }
-// };
 
 export default class Contact extends Component {
   state = {
-    open: false
+    open: false,
+    email: "",
+    message: ""
   };
 
   handleOpen = () => {
@@ -32,6 +23,14 @@ export default class Contact extends Component {
 
   handleClose = () => {
     this.setState({ open: false });
+  };
+
+  // handleSubmit = () => {
+  //   EmailService.send({this.state})
+  // }
+
+  onChangeInput = e => {
+    this.setState({ [e.target.name]: [e.target.value] });
   };
 
   render() {
@@ -60,17 +59,26 @@ export default class Contact extends Component {
           <Paper zDepth={4}>
             <div className="contact-container">
               <h2>Send Me a Message</h2>
-              <TextField floatingLabelText="your email" className="text" />
-              {/* <br /> */}
+              <TextField
+                floatingLabelText="your email"
+                className="text"
+                name="email"
+                value={this.state.email}
+                onChange={this.onChangeInput}
+              />
               <TextField
                 floatingLabelText="your message"
                 rows={3}
                 multiLine={true}
                 className="text"
+                name="message"
+                value={this.state.message}
+                onChange={this.onChangeInput}
               />
               <br />
               <div className="buttons-container">
                 <FlatButton
+                  // onClick={this}
                   label="Submit"
                   className="message-button"
                   id="submit-button"

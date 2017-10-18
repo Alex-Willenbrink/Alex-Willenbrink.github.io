@@ -15,9 +15,12 @@ var settings = {
   slidesToScroll: 2
 };
 export default class SimpleSlider extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="portfolio-container">
+      <div className="portfolio-container" ref={this.props.showLocation}>
         <Slider {...settings} className="carousel">
           <div className="image-center">
             <a href="https://rate-super-people.herokuapp.com/" target="_blank">
