@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import SvgIcon from "material-ui/SvgIcon";
 
+import Scroll from "react-scroll";
+import { scroller } from "react-scroll";
+
 import "./App.css";
 import Navbar from "../Navbar";
 import Profile from "../Profile";
@@ -14,20 +17,30 @@ class App extends Component {
     portfolioLocation: 0
   };
 
-  showLocation = element => {
-    console.log(element.getBoundingClientRect());
-    const { x, y, width, height, top } = element.getBoundingClientRect();
-    this.setState({ portfolioLocation: y });
+  scrollTo = async element => {
+    await this.changeElementLocation(element);
+    Scroll.animateScroll.scrollTo(this.state[`${element}Location`]);
+  };
+
+  changeElementLocation = refName => {
+    this.setState({ [`${refName}Location`]: this.getElementLocation(refName) });
+  };
+
+  getElementLocation = refName => {
+    return this.refs[refName].getLocation(refName);
   };
 
   render() {
-    console.log(this.state);
+    console.log("this.state: ", this.state);
     return (
-      <div className="App" onClick={this.handleTest}>
-        <Navbar portfolioLocation={this.state.portfolioLocation} />
+      <div
+        className="App"
+        onClick={() => this.changeElementLocation("portfolio")}
+      >
+        <Navbar scrollTo={this.scrollTo} />
         <Profile />
-        <Portfolio showLocation={this.showLocation} />
-        <About />
+        <Portfolio ref="portfolio" />
+        <About ref="about" />
       </div>
     );
   }

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import Slider from "react-slick";
 import Divider from "material-ui/Divider";
 
@@ -14,13 +15,18 @@ var settings = {
   slidesToShow: 2,
   slidesToScroll: 2
 };
-export default class SimpleSlider extends React.Component {
+export default class Portfolio extends Component {
   constructor(props) {
     super(props);
   }
+
+  getLocation = refName => {
+    return ReactDOM.findDOMNode(this.refs[refName]).getBoundingClientRect().top;
+  };
+
   render() {
     return (
-      <div className="portfolio-container" ref={this.props.showLocation}>
+      <div className="portfolio-container" ref="portfolio">
         <Slider {...settings} className="carousel">
           <div className="image-center">
             <a href="https://rate-super-people.herokuapp.com/" target="_blank">

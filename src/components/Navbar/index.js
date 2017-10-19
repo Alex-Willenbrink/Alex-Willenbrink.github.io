@@ -30,7 +30,7 @@ class Navbar extends Component {
     return (
       <AppBar
         iconElementLeft={
-          <div className="appbar-icons" ref="test-ref">
+          <div className="appbar-icons">
             <a href="https://github.com/Alex-Willenbrink" target="_blank">
               <IconButton tooltip="Github">
                 <SvgIcon>
@@ -62,19 +62,12 @@ class Navbar extends Component {
             <FlatButton
               label="PORTFOLIO"
               className="navbar-button"
-              onClick={() => {
-                console.log(
-                  "portfolioLocation: ",
-                  this.props.portfolioLocation
-                );
-                this.scrollTo(Math.floor(this.props.portfolioLocation));
-              }}
-              // onClick={() => this.scrollTo(100)}
+              onClick={() => this.props.scrollTo("portfolio")}
             />
             <FlatButton
               label="ABOUT"
               className="navbar-button"
-              onClick={this.scrollToBottom}
+              onClick={() => this.props.scrollTo("about")}
             />
             <Contact />
           </div>
