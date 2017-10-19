@@ -8,9 +8,9 @@ import CurrencyConverterImage from "./currency_converter_display_image.png";
 import DynamicUrlImage from "./dynamic_url_shortener_display_image.png";
 import SuperPeopleImage from "./super_people_display_image.png";
 
-var settings = {
+const settings = {
   dots: true,
-  infinite: true,
+  infinite: false,
   speed: 500,
   slidesToShow: 2,
   slidesToScroll: 2
