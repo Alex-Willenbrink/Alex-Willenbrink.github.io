@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
-import SvgIcon from "material-ui/SvgIcon";
+import { withRouter } from "react-router-dom";
+import queryString from "query-string";
+import swal from "sweetalert2/dist/sweetalert2.all.min.js";
 
 import Scroll from "react-scroll";
-import { scroller } from "react-scroll";
 
 import "./App.css";
 import Navbar from "../Navbar";
 import Profile from "../Profile";
-import Contact from "../Contact";
 import Portfolio from "../Portfolio";
 import About from "../About";
 
@@ -16,6 +15,19 @@ class App extends Component {
   state = {
     portfolioLocation: 0
   };
+
+  componentDidMount() {
+    const { email } = queryString.parse(this.props.location.search);
+    if (email === "success") {
+      swal({
+        type: "success",
+        title: "Success!",
+        text: "Message Sent",
+        timer: 2000
+      });
+    }
+    this.props.history.push("/");
+  }
 
   scrollTo = async element => {
     await this.changeElementLocation(element);
@@ -31,7 +43,6 @@ class App extends Component {
   };
 
   render() {
-    console.log("this.state: ", this.state);
     return (
       <div className="App">
         <Navbar scrollTo={this.scrollTo} />
@@ -43,4 +54,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);

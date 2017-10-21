@@ -4,19 +4,23 @@
   "private": true,
   "dependencies": {
     "babel-preset-react-native": "^4.0.0",
+    "cryptr": "^2.0.0",
     "dotenv": "^4.0.0",
     "jquery": "^3.2.1",
     "material-ui": "^0.19.4",
     "nodemailer": "^4.2.0",
+    "query-string": "^5.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-modal": "^3.0.3",
     "react-native-dotenv": "^0.1.0",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14",
     "react-scroll": "^1.6.1",
     "react-slick": "^0.15.4",
     "react-svg": "^2.1.22",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^6.11.0"
   },
   "scripts": {
     "start": "react-scripts start",

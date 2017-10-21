@@ -3,7 +3,7 @@ import React from "react";
 export const Github = ({ fill }) =>
   <svg
     viewBox="0 0 450 450"
-    perserveAspectRatio="none"
+    perserveaspectratio="none"
     xmlns="http://www.w3.org/2000/svg"
     fill={fill}
   >
@@ -32,7 +32,7 @@ export const Github = ({ fill }) =>
 export const Torah = ({ fill }) =>
   <svg
     viewBox="0 0 450 450"
-    perserveAspectRatio="none"
+    perserveaspectratio="none"
     xmlns="http://www.w3.org/2000/svg"
     fill={fill}
   >
@@ -80,7 +80,7 @@ export const Torah = ({ fill }) =>
 export const LinkedIn = ({ fill }) =>
   <svg
     viewBox="0 0 450 450"
-    perserveAspectRatio="none"
+    perserveaspectratio="none"
     xmlns="http://www.w3.org/2000/svg"
     fill={fill}
   >

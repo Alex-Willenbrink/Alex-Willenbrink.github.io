@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+.portfolio-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .portfolio-title {
   font-size: calc(1em + 3vw);
   color: black;
@@ -26,9 +33,113 @@
   background-color: black !important;
 }
 
-.image-center {
-  /*text-align: center !important;*/
+.image-container {
+  height: 20vw;
   display: flex !important;
-  align-items: center !important;
   justify-content: center !important;
+  align-items: stretch !important;
+}
+
+.portfolio-image {
+  width: 80%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#super-people {
+  background-image: url("super_people_display_image.png");
+}
+
+#super-people:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("super_people_display_image.png") !important;
+}
+
+#dinnerbell {
+  background-image: url("dinnerbell_display_image.png");
+}
+
+#dinnerbell:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("dinnerbell_display_image.png") !important;
+}
+
+#currency-exchange-rates {
+  background-image: url("currency_converter_display_image.png");
+}
+
+#currency-exchange-rates:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("currency_converter_display_image.png") !important;
+}
+/*#currency-exchange {
+  background-image: url("currency_converter_display_image.png");
+}*/
+
+.portfolio-info-container {
+  display: none;
+  padding: 5%;
+}
+
+.portfolio-info-container.info {
+  width: 80%;
+}
+
+.portfolio-info-container.tech {
+  width: 20%;
+}
+
+.portfolio-image:hover .portfolio-info-container {
+  display: flex;
+}
+
+.portfolio-info {
+  color: white;
+}
+
+h3.portfolio-info.info {
+  font-size: 2vw;
+  margin: 0;
+}
+
+p.portfolio-info.info {
+  font-size: 1.2vw;
+  line-height: 1.5em;
+  margin: 4% 0;
+}
+
+a.portfolio-info.info {
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+.portfolio-info-divider.info {
+  height: 0.2vw !important;
+  margin-top: 3% !important;
+  width: 100%;
+  color: white;
+}
+
+.portfolio-info-divider.tech {
+  height: 0.08vw !important;
+  margin: 5% 0 !important;
+  width: 100%;
+  color: white;
+}
+
+h4.portfolio-info.tech {
+  font-size: 1.2vw;
+  margin: 0;
+}
+
+p.portfolio-info.tech {
+  font-size: 1vw;
+  margin: 0;
 }

@@ -6,7 +6,7 @@ import "./Profile.css";
 
 const Profile = () =>
   <div className="profile-container">
-    <img src={profile} id="profile-pic" />
+    <img src={profile} id="profile-pic" alt="" />
     <br />
     <br />
     <Divider className="divider profile-text" />

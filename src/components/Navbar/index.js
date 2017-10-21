@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import AppBar from "material-ui/AppBar";
 import IconButton from "material-ui/IconButton";
 import SvgIcon from "material-ui/SvgIcon";
 import FlatButton from "material-ui/FlatButton";
 import Scroll from "react-scroll";
-import { scroller } from "react-scroll";
 
 import Contact from "../Contact";
 
@@ -14,10 +12,6 @@ import { Github, Torah, LinkedIn } from "../CustomSvg";
 import "./Navbar.css";
 
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   scrollToBottom = () => {
     Scroll.animateScroll.scrollToBottom();
   };
@@ -31,7 +25,11 @@ class Navbar extends Component {
       <AppBar
         iconElementLeft={
           <div className="appbar-icons">
-            <a href="https://github.com/Alex-Willenbrink" target="_blank">
+            <a
+              href="https://github.com/Alex-Willenbrink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IconButton tooltip="Github">
                 <SvgIcon>
                   <Github fill="white" />
@@ -41,6 +39,7 @@ class Navbar extends Component {
             <a
               href="https://www.linkedin.com/in/alex-willenbrink-707856104/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <IconButton tooltip="LinkedIn">
                 <SvgIcon>
@@ -48,7 +47,11 @@ class Navbar extends Component {
                 </SvgIcon>
               </IconButton>
             </a>
-            <a href="https://programmer53blog.wordpress.com/" target="_blank">
+            <a
+              href="https://programmer53blog.wordpress.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <IconButton tooltip="Personal Blog">
                 <SvgIcon>
                   <Torah fill="white" />

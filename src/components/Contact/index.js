@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import Dialog from "material-ui/Dialog";
 import Modal from "react-modal";
 import TextField from "material-ui/TextField";
 import FlatButton from "material-ui/FlatButton";
 import Paper from "material-ui/Paper";
+import Cryptr from "cryptr";
 
-import { green500 } from "material-ui/styles/colors";
-
-// import EmailService from "../../services/nodemailer";
 import "./Contact.css";
 
 export default class Contact extends Component {
@@ -25,24 +22,16 @@ export default class Contact extends Component {
     this.setState({ open: false });
   };
 
-  // handleSubmit = () => {
-  //   EmailService.send({this.state})
-  // }
-
   onChangeInput = e => {
     this.setState({ [e.target.name]: [e.target.value] });
   };
 
+  getEmail = () => {
+    const cryptr = new Cryptr("wowwhatagreatkey");
+    return cryptr.decrypt("1243ba58f418d5f8b94abf8ff80ffa4e568abee7a322");
+  };
+
   render() {
-    const actions = [
-      <FlatButton label="Cancel" primary={true} onClick={this.handleClose} />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        disabled={true}
-        onClick={this.handleClose}
-      />
-    ];
     return (
       <div>
         <FlatButton
@@ -57,12 +46,17 @@ export default class Contact extends Component {
           className={{ afterOpen: "contact-modal" }}
         >
           <Paper zDepth={4}>
-            <div className="contact-container">
+            <form
+              className="contact-container"
+              action={`https://formspree.io/${this.getEmail()}`}
+              method="POST"
+            >
               <h2>Send Me a Message</h2>
               <TextField
                 floatingLabelText="your email"
                 className="text"
                 name="email"
+                type="email"
                 value={this.state.email}
                 onChange={this.onChangeInput}
               />
@@ -72,13 +66,14 @@ export default class Contact extends Component {
                 multiLine={true}
                 className="text"
                 name="message"
+                type="text"
                 value={this.state.message}
                 onChange={this.onChangeInput}
               />
               <br />
               <div className="buttons-container">
                 <FlatButton
-                  // onClick={this}
+                  type="submit"
                   label="Submit"
                   className="message-button"
                   id="submit-button"
@@ -90,7 +85,8 @@ export default class Contact extends Component {
                   className="message-button"
                 />
               </div>
-            </div>
+              <input type="hidden" name="_next" value="/?email=success" />
+            </form>
           </Paper>
         </Modal>
       </div>

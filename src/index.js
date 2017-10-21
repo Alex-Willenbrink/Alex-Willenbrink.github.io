@@ -4,12 +4,12 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
 import AlexTheme from "./CustomTheme";
 import "./index.css";
-import App from "./components/App";
+import Routes from "./components/Routes";
 import registerServiceWorker from "./registerServiceWorker";
 
 ReactDOM.render(
   <MuiThemeProvider muiTheme={AlexTheme}>
-    <App />
+    <Routes />
   </MuiThemeProvider>,
   document.getElementById("root")
 );

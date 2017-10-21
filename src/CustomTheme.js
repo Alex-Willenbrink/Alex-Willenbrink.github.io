@@ -1,12 +1,6 @@
 import getMuiTheme from "material-ui/styles/getMuiTheme";
 
-import {
-  green500,
-  green700,
-  teal600,
-  yellow500,
-  grey900
-} from "material-ui/styles/colors";
+import { green700, teal600, grey900 } from "material-ui/styles/colors";
 
 export default getMuiTheme({
   // spacing: spacing,
