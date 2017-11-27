@@ -6,11 +6,11 @@ import "./Profile.css";
 
 const Profile = () =>
   <div className="profile-container">
-    <img src={profile} id="profile-pic" alt="" />
-    <br />
-    <br />
-    <Divider className="divider profile-text" />
     <h2 className="profile-title">ALEX WILLENBRINK</h2>
+    <Divider className="divider profile-text" />
+    <br />
+    <br />
+    <img src={profile} id="profile-pic" alt="" />
   </div>;
 
 export default Profile;

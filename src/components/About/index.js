@@ -12,11 +12,15 @@ export default class About extends Component {
   render() {
     return (
       <div className="about-container" ref="about">
+        <h2 className="about-title">About</h2>
+        <Divider className="divider" />
+        <br />
+        <br />
         <p className="intro-about-text">Hi, I'm Alex!</p>
         <p className="about-text">
           I'm a full-stack developer currently located in St. Louis, Missouri. I
           love making full-stack applications with a particular affinity towards
-          the mean stack. I have a passion for creation of applications geared
+          the mern stack. I have a passion for creation of applications geared
           towards presentation and analysis of biological phenomena.
           <br />
           <br />
@@ -24,10 +28,6 @@ export default class About extends Component {
           technology! I also enjoy soccer and hiking... regarded the weather has
           no objections.
         </p>
-        <br />
-        <Divider className="divider" />
-
-        <h2 className="about-title">About</h2>
       </div>
     );
   }

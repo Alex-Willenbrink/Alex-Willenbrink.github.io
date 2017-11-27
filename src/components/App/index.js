@@ -10,6 +10,7 @@ import Navbar from "../Navbar";
 import Profile from "../Profile";
 import Portfolio from "../Portfolio";
 import About from "../About";
+import Footer from "../Footer";
 
 class App extends Component {
   state = {
@@ -49,6 +50,7 @@ class App extends Component {
         <Profile />
         <Portfolio ref="portfolio" />
         <About ref="about" />
+        <Footer />
       </div>
     );
   }
