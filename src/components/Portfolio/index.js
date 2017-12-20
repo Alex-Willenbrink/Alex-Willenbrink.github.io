@@ -13,6 +13,7 @@ const settings = {
   slidesToShow: 2,
   slidesToScroll: 2
 };
+
 export default class Portfolio extends Component {
   getLocation = refName => {
     return ReactDOM.findDOMNode(this.refs[refName]).getBoundingClientRect().top;

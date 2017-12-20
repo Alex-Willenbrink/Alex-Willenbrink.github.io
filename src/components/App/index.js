@@ -8,6 +8,7 @@ import Scroll from "react-scroll";
 import "./App.css";
 import Navbar from "../Navbar";
 import Profile from "../Profile";
+
 import Portfolio from "../Portfolio";
 import About from "../About";
 import Footer from "../Footer";
